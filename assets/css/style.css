@@ -189,3 +189,47 @@ body {
   padding-inline: 30px;
   clip-path: var(--clip-path-3);
 }
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+.logo img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-toggle-btn,
+.dropdown-menu{
+  display: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 10px 12px;
+  z-index: 4;
+  box-shadow: var(--shadow);
+}
+
+.header.active {
+  position: fixed;
+  animation: slideUP is ease forwards;
+}
+
+@keyframes slideUP {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
